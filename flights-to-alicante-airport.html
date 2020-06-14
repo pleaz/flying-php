@@ -1,0 +1,74 @@
+<!-- INCLUDE overall_header.html -->
+<h2>Flights to Alicante airport</h2>
+<div class="panel">
+<div class="inner">
+<div class="content">
+<!-- IF not S_IS_BOT and S_USER_LOGGED_IN -->
+<div align="center">
+<p class="maintextcentered">
+<table width="700px">
+<tr>
+<td>
+<html>
+<body>
+<div align="center">
+
+
+    <!--- start main --->
+    <div class="fly-result" style="overflow:auto;height:800px;"></div>
+    <script type="application/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="application/javascript">
+        function GetURLParameter(sParam) {
+            let sPageURL = window.location.search.substring(1);
+            let sURLVariables = sPageURL.split('&');
+            for (let i = 0; i < sURLVariables.length; i++)
+            {
+                let sParameterName = sURLVariables[i].split('=');
+                if (sParameterName[0] == sParam)
+                {
+                    return sParameterName[1];
+                }
+            }
+        }
+        function flyPost(){
+            let tp = GetURLParameter('tp');
+            let day = GetURLParameter('day');
+            let data; let data_n;
+            if(tp) data = {tp: tp}; else data = {};
+            if(day) data_n = {day: day}; Object.assign(data, data_n);
+            $.post( "/flying-ajax2.php", data, function( data ) {
+                $( ".fly-result" ).html( data );
+            });
+        }
+        flyPost();
+        setInterval(flyPost, 10000);
+    </script>
+    <style>
+        input[name="airportQueryType"] {display: none;}
+        .fly-result table:nth-child(5){display: none;}
+    </style>
+    <link rel="stylesheet" href="/blue.css">
+    <link rel="stylesheet" href="/airline.css">
+    <!--- end main --->
+
+
+</div>
+</body>
+</html>
+</td>
+</tr>
+</table>
+<br />
+<div style="margin: auto auto; width:360px; margin-top:0; padding-top:0;"><!-- INCLUDEPHP taf.php --> </div>
+<!-- ELSE -->
+<br />
+<p>To see the contents of this page, just login or join, via the links near the top right hand side of this page.</p>
+<!-- ENDIF -->
+</div>
+<span class="corners-bottom"><span></span></span></div>
+</div>
+</div>
+<!-- INCLUDE jumpbox.html -->
+<script type="text/javascript" src="/_a_js/nrcscript.js">
+</script>
+<!-- INCLUDE overall_footer.html -->

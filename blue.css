@@ -1,0 +1,89 @@
+.flights {
+    float:left;
+    /*height: 500px;*/
+    width:930px;
+}
+.dropcap-1 {
+    display: block;
+    float: left;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 2px 8px 0 0;
+    color: #2d81b6;
+}
+.title-col {
+    width: 199px;
+    padding-right: 20px;
+    margin-right: 20px;
+    border-right: 1px solid #e7e7e7;
+    margin-top: 40px;
+    margin: 0 20px 25px 0;
+    float: left;
+}
+
+.title-col h2 {
+    font-size: 34px;
+    line-height: 36px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.title-col p {
+    color: #999;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.one-fourth {
+    float: left;
+    width: 210px;
+    margin: 0 30px 25px 0;
+}
+.one-fourth-hotel {
+    float: left;
+    width: 200px;
+    margin: 0 30px 25px 0;
+    text-align:center;
+}
+.one-fourth-hotel a{
+    font-size:12px;
+    font-weight:bold;
+}
+
+.one-third {
+    float: left;
+    width: 290px;
+    margin: 0 30px 25px 0;
+    text-align:justify;
+}
+#col_right {
+    float: left;
+    width: 250px;
+    margin: 0 30px 25px 0;
+    text-align:justify;
+}
+
+.one-half {
+    float: left;
+    margin: 30px 30px 25px 0;
+    width: 450px;
+    text-align:justify;
+}
+.full-width {
+    padding-bottom: 15px;
+}
+
+.last {
+    margin-right: 0px !important;
+}
+.current {
+    border-bottom: 1px solid #2d81b6;
+    padding-bottom: 7px;
+}
+
+.col-container{
+    float:left;
+    width:100%;
+    margin: 0 auto;
+}
